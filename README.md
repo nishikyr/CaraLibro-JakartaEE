@@ -22,4 +22,4 @@ Mini red social estilo Facebook desarrollada con **Jakarta EE**. Permite listar 
 
 ---
 
-> Proyecto académico para prácticas de Desarrollo de Aplicaciones Web con Entornos Empresariales (DWES).
+> Challenge by Mariluz, Dev by Alejandro Nishiky
