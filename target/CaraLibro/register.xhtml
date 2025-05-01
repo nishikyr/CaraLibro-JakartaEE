@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Regístrate - CaraLibro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        .registro-container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+        .logo {
+            font-size: 2rem;
+            color: #3b5998;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</h:head>
+<h:body style="background-color: #f0f2f5;">
+
+    <div class="registro-container">
+        <div class="logo">CaraLibro</div>
+        <h3 class="text-center mb-4">Crea tu cuenta</h3>
+
+        <h:form>
+            <h:messages globalOnly="true" styleClass="alert alert-danger" />
+
+            <div class="mb-3">
+                <h:outputLabel for="nombre" value="Nombre completo:" />
+                <h:inputText id="nombre" value="#{registroBean.nombre}" required="true"
+                             styleClass="form-control"
+                             requiredMessage="El nombre es obligatorio" />
+                <h:message for="nombre" styleClass="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="email" value="Correo electrónico:" />
+                <h:inputText id="email" value="#{registroBean.email}" required="true"
+                             styleClass="form-control"
+                             requiredMessage="El correo es obligatorio" />
+                <h:message for="email" styleClass="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="password" value="Contraseña:" />
+                <h:inputSecret id="password" value="#{registroBean.password}" required="true"
+                               styleClass="form-control"
+                               requiredMessage="La contraseña es obligatoria" />
+                <h:message for="password" styleClass="text-danger" />
+            </div>
+
+            <h:commandButton value="Registrarme" action="#{registroBean.registrar}"
+                             styleClass="btn btn-primary w-100" />
+        </h:form>
+
+        <p class="text-center mt-3">
+            <h:outputLink value="index.xhtml">← Volver al muro</h:outputLink>
+        </p>
+    </div>
+
+    <script src="css/bootstrap.bundle.min.js"></script>
+</h:body>
+</html>

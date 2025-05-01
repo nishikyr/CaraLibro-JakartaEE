@@ -10,6 +10,7 @@ import es.daw.web.exceptions.JPAException;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 
 @RequestScoped
 public class CrudRepositoryUsuario implements CrudRepository<Usuario> {
@@ -42,9 +43,14 @@ public class CrudRepositoryUsuario implements CrudRepository<Usuario> {
     }
 
     @Override
+    @Transactional
     public void save(Usuario t) throws JPAException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        try {
+            em.persist(t);
+            //em.flush();
+        } catch (Exception e) {
+            throw new JPAException(JpaManagerCdi.getMessageError(e));
+        }
     }
     
 }
