@@ -4,7 +4,7 @@ Mini red social estilo Facebook desarrollada con **Jakarta EE**. Permite listar 
 
 ## 🖼️ Vista previa
 
-![Vista de la app](images/muro-preview.png)
+![Vista de la app](https://github.com/nishikyr/CaraLibro-JakartaEE/blob/master/preview/main.png)
 
 ## 🚀 Tecnologías usadas
 
