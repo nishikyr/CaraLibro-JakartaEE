@@ -1,0 +1,11 @@
+es\daw\web\entities\User.class
+es\daw\web\controllers\ColorServlet.class
+es\daw\web\repositories\CrudRepository.class
+es\daw\web\repositories\CrudRepositoryUser.class
+es\daw\web\filter\ContadorFilter.class
+es\daw\web\controllers\BibliotecaServlet.class
+es\daw\web\entities\Rol.class
+es\daw\web\cdi\LoginBean.class
+es\daw\web\repositories\JpaManagerCdi.class
+es\daw\web\cdi\PreferenciaBean.class
+es\daw\web\exceptions\JPAException.class

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Nuevo Préstamo</title>
+</h:head>
+<h:body>
+    <h1>Crear nuevo préstamo</h1>
+    <h:form>
+        <h:outputLabel value="Selecciona un socio" />
+        
+        <!-- Listado de socios-->
+        <h:selectOneMenu id="socio" value="#{}">
+            <f:selectItems value="socioBean.socios" var="socio" itemValue="#{socio}" itemLabel="#{socio.nombre}" >
+
+            </f:selectItems>
+
+        </h:selectOneMenu>
+
+        <!-- Pendiente listado de ejemplares -->
+        <h:commandButton value="Dar de alta el préstamo" action="Prestam" />
+    </h:form>
+</h:body>
+</html>
