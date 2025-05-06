@@ -36,6 +36,21 @@ public class CrudRepositoryUsuario implements CrudRepository<Usuario> {
         throw new UnsupportedOperationException("Unimplemented method 'selectById'");
     }
 
+    //#region ================ Buscar usuario por correo ===========================
+    public Optional<Usuario> selectByEmail(String email) throws JPAException{
+        try {
+            String jqpl = "SELECT u FROM Usuario u WHERE u.email = :email";
+            Usuario usuarioEncontrado = em.createQuery(jqpl, Usuario.class)
+                                        .setParameter("email", email)
+                                        .getSingleResult();
+            return Optional.of(usuarioEncontrado);
+        } catch (Exception e) {
+            new JPAException(JpaManagerCdi.getMessageError(e));
+        }
+        return Optional.empty();
+    }
+    //#endregion ===================================================================
+
     @Override
     public void deleteById(int id) throws JPAException {
         // TODO Auto-generated method stub

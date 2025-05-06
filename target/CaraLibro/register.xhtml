@@ -35,29 +35,21 @@
             <div class="mb-3">
                 <h:outputLabel for="nombre" value="Nombre completo:" />
                 <h:inputText id="nombre" value="#{registroBean.nombre}" required="true"
-                             styleClass="form-control"
-                             requiredMessage="El nombre es obligatorio" />
+                            styleClass="form-control"
+                            requiredMessage="El nombre es obligatorio" />
                 <h:message for="nombre" styleClass="text-danger" />
             </div>
 
             <div class="mb-3">
                 <h:outputLabel for="email" value="Correo electrónico:" />
                 <h:inputText id="email" value="#{registroBean.email}" required="true"
-                             styleClass="form-control"
-                             requiredMessage="El correo es obligatorio" />
+                            styleClass="form-control"
+                            requiredMessage="El correo es obligatorio" />
                 <h:message for="email" styleClass="text-danger" />
             </div>
 
-            <div class="mb-3">
-                <h:outputLabel for="password" value="Contraseña:" />
-                <h:inputSecret id="password" value="#{registroBean.password}" required="true"
-                               styleClass="form-control"
-                               requiredMessage="La contraseña es obligatoria" />
-                <h:message for="password" styleClass="text-danger" />
-            </div>
-
-            <h:commandButton value="Registrarme" action="#{registroBean.registrar}"
-                             styleClass="btn btn-primary w-100" />
+            <h:commandButton value="Registrarme" action="#{registroBean.guardarUsuario}"
+                            styleClass="btn btn-primary w-100" />
         </h:form>
 
         <p class="text-center mt-3">
